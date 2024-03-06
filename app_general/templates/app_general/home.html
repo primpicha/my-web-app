@@ -1,0 +1,37 @@
+{% extends 'app_general/components/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="home-landing">
+  <h1 class="home-landing-text">Meow-Gelato</h1>
+  <h4 class="home-landing-text">ไอศรีกรีม Homemade หมดง่ายละลายไว</h4>
+  <h6 class="home-landing-text">จำหน่ายไอศกรีม คุณภาพมาตรฐานส่งออก ที่ทั้งอร่อยและดีต่อสุขภาพ ด้วยการผลิตอย่างปราณีตพิถีพิถันและส่วนผสมที่ดีที่สุดจากธรรมชาติ 100%</h6>
+  <p>
+    <a class="button" href="{% url 'foods' %}">ดูเมนูทั้งหมด</a>
+    <a class="button button-primary" href="{% url 'subscription' %}">ลงทะเบียนรับโปรโมชั่น</a>
+  </p>
+</section>
+<section class="content-section">
+  <div class="content-container">
+    <h3 class="content-title text-center">อธิบายอะไรซักหน่อย</h3>
+    <div class="grid grid-3">
+      <div>
+        <img class="image-block" src="{% static 'app_general/home-about-1.jpg' %}">
+        <p>เหมียวไรเดอร์ คือ บริการจัดส่งไอศครีมอร่อยถึงมือคุณ เดือนละครั้ง ในวันจันทร์ที่คุณสะดวกรับ</p>
+      </div>
+      <div>
+        <img class="image-block" src="{% static 'app_general/home-about-2.jpg' %}">
+        <p>แมวดำข้างบ้าน คือ พนักงานส่งไอศครีม ขี่ไวแบบไม่ย้อนศร และฉีดวัคซีนครบแมวเรียบร้อยแล้วทุกคน</p>
+      </div>
+      <div>
+        <img class="image-block" src="{% static 'app_general/home-about-3.jpg' %}">
+        <p>ไอศครีมทุกรสรังสรรค์ขึ้นมาอย่างพิถีพิถัน ไม่หวั่นแม้ออเดอร์มามาก</p>
+      </div>
+    </div>
+    <p class="text-center">
+      <a class="button" href="{% url 'about' %}">เกี่ยวกับเหมียวเจลาโต้</a>
+    </p>
+
+  </div>
+</section>
+{% endblock %}
